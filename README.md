@@ -16,7 +16,6 @@ This repository contains a discriminator that could be trained to evaluate image
 
 + Python (2.7)
 + Tensorflow (>1.4)
-+ OpenCV
 + PyTorch (for extracting ResNet image features.)
 + ProgressBar
 + NLTK
@@ -27,7 +26,7 @@ This repository contains a discriminator that could be trained to evaluate image
 ```bash
 git clone --recursive https://github.com/richardaecn/cvpr18-caption-eval.git
 ```
-2. Install dependencies. Please refer to TensorFlow, PyTorch, NTLK, and OpenCV's official websites for installation guide. For other dependencies, please use the following:
+2. Install dependencies. Please refer to TensorFlow, PyTorch and NLTK's official websites for installation guide. For other dependencies, please use the following:
 ```bash
 pip install -r requirements.txt
 ```
@@ -67,7 +66,7 @@ To evaluate the results of an image captioning method, first put the output capt
 
 Note that ```<caption-i>``` are caption represented in text, and the file name is the name for the file in the image. The caption should be all lower-cased and have no ```\n``` at the end. Examples of such files by running open sourced [NeuralTalk](https://github.com/karpathy/neuraltalk2), [Show and Tell](https://github.com/tensorflow/models/tree/master/research/im2txt) and [Show, Attend and Tell](https://github.com/yunjey/show-attend-and-tell) can be found in the ```examples``` folder: ```examples/neuraltalk_all_captions.json```, ```examples/showandtell_all_captions.json```, ```examples/showattendandtell_all_captions.json```, and ```examples/human_all_captions.json```.
 
-Make sure you have NLTK Punkt sentence tokenizer installed:
+Make sure you have NLTK Punkt sentence tokenizer installed in Python:
 ```python
 import nltk
 nltk.download('punkt')
